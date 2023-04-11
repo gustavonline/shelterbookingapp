@@ -1806,11 +1806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/ShelterBookingApp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+      "projectUniqueName": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
       "projectName": "ShelterBookingApp.Client",
-      "projectPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/ShelterBookingApp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+      "projectPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
       "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-      "outputPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/ShelterBookingApp/ShelterBookingApp.Client/obj/",
+      "outputPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"

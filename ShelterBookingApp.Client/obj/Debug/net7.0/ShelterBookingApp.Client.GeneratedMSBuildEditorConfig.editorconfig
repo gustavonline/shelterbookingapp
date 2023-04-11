@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ShelterBookingApp.Client
 build_property.RootNamespace = ShelterBookingApp.Client
-build_property.ProjectDir = /Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/
+build_property.ProjectDir = /Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client
+build_property.MSBuildProjectDirectory = /Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/App.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Pages/Counter.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Pages/FetchData.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Pages/Index.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Shared/SurveyPrompt.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/_Imports.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Shared/MainLayout.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ox59qf22pv
 
-[/Users/gustavanderson/Downloads/ShelterBookingApp/ShelterBookingApp.Client/Shared/NavMenu.razor]
+[/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-s3y5cwq0x2
