@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelterBookingApp.Client", "ShelterBookingApp.Client\ShelterBookingApp.Client.csproj", "{7C9224BB-8CDB-4292-A6D1-17E6AF3EEFED}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShelterBookingApp.Client", "ShelterBookingApp.Client\ShelterBookingApp.Client.csproj", "{7C9224BB-8CDB-4292-A6D1-17E6AF3EEFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelterBookingApp.Server", "ShelterBookingApp.Server\ShelterBookingApp.Server.csproj", "{9C89BC70-8805-410A-8E31-7B9E63720452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShelterBookingApp.Server", "ShelterBookingApp.Server\ShelterBookingApp.Server.csproj", "{9C89BC70-8805-410A-8E31-7B9E63720452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelterBookingApp.Shared", "ShelterBookingApp.Shared\ShelterBookingApp.Shared.csproj", "{91D6F48B-21AA-4DE1-AD47-9507A58291C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShelterBookingApp.Shared", "ShelterBookingApp.Shared\ShelterBookingApp.Shared.csproj", "{91D6F48B-21AA-4DE1-AD47-9507A58291C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +27,8 @@ Global
 		{91D6F48B-21AA-4DE1-AD47-9507A58291C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91D6F48B-21AA-4DE1-AD47-9507A58291C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91D6F48B-21AA-4DE1-AD47-9507A58291C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
