@@ -1,4 +1,4 @@
-﻿namespace ShelterBookingApp.Server.Models
+﻿namespace ShelterBookingApp.Shared.Models
 {
     public class Shelter
     {
