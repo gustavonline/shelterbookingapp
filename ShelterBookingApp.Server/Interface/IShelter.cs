@@ -4,8 +4,8 @@ namespace ShelterBookingApp.Server.Interface
 {
     public interface IShelter
     {
-        Task<List<Shelter>> GetAllShelters(); 
+        List<Shelter> GetAllShelters(); 
         
-         Task Update(int id); 
+         //Task Update(int id); 
     }
 }

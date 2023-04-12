@@ -1,6 +1,8 @@
 ﻿@page "/shelterbooking"
-@inject HttpClient Http; 
-@using ShelterBookingApp.Shared.Models; 
+@inject HttpClient Http;
+@using ShelterBookingApp.Shared.Models;
+@inject NavigationManager NavManager;
+@using System.Text.Json;
 
 <h3>ShelterPage</h3>
 
@@ -19,14 +21,42 @@
     </div>
 </div>
 
-
-
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Description</th>
+        <th>Municipality</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var shelter in Shelters)
+    {
+        <tr>
+            <td>@shelter.Properties.Name</td>
+            <td>@shelter.Properties.Capacity</td>
+            <td>@shelter.Properties.Description</td>
+            <td>@shelter.Properties.Municipality</td>
+        </tr>
+    }
+    </tbody>
+</table>
 
 @code {
+    private List<Shelter> Shelters { get; set; } = new List<Shelter>();
 
-    List<Shelter> shelters = new List<Shelter>
+    protected override async Task OnInitializedAsync()
     {
-        
-    };
-
+        var response = await Http.GetAsync(NavManager.ToAbsoluteUri("https://localhost:7269/api/shelter"));
+        if (response.IsSuccessStatusCode)
+        {
+            var content = await response.Content.ReadAsStringAsync();
+            Shelters = JsonSerializer.Deserialize<List<Shelter>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine($"Error fetching shelters: {response.StatusCode}");
+        }
+    }
 }

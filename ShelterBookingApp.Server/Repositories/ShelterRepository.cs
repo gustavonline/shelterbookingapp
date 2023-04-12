@@ -23,16 +23,12 @@ namespace ShelterBookingApp.Server.Repositories
         }
 
 
-        public async Task<List<Shelter>> GetAllShelters() 
+        public List<Shelter> GetAllShelters() 
         {
 
-            return await collection.Find(i => true).ToListAsync();
-            //return await collection.Find(new BsonDocument()).ToListAsync();
+            //return await collection.Find(i => true).ToListAsync();
+            return collection.Find(new BsonDocument()).ToList();
         }
-
-        public Task Update(int id)
-        {
-            return _shelterImplementation.Update(id);
-        }
+        
     }
 }
