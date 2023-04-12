@@ -1,4 +1,4 @@
-﻿using ShelterBookingApp.Server.Models;
+﻿using ShelterBookingApp.Shared.Models;
 
 namespace ShelterBookingApp.Server.Interface
 {

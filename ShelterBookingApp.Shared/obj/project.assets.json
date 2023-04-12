@@ -8,26 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\": {}
+    "/Users/gustavanderson/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
+      "projectUniqueName": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
       "projectName": "ShelterBookingApp.Shared",
-      "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
-      "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Shared\\obj\\",
+      "projectPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
+      "packagesPath": "/Users/gustavanderson/.nuget/packages/",
+      "outputPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

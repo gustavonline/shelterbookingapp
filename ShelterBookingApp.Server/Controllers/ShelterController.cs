@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShelterBookingApp.Server.Interface;
-using ShelterBookingApp.Server.Models; 
+using ShelterBookingApp.Shared.Models; 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using MongoDB.Bson;
 using ShelterBookingApp.Server.Interface;
-using ShelterBookingApp.Server.Models;
+using ShelterBookingApp.Shared.Models;
 
 
 namespace ShelterBookingApp.Server.Repositories
@@ -12,6 +12,7 @@ namespace ShelterBookingApp.Server.Repositories
         private const string databaseName = "ShelterDB";
         private const string collectionName = "shelter_minus";
         private IMongoCollection<Shelter> collection;
+        private IShelter _shelterImplementation;
 
 
         public ShelterRepository()
@@ -28,6 +29,9 @@ namespace ShelterBookingApp.Server.Repositories
             //return collection.Find(new BsonDocument()).ToListAsync();
         }
 
-
+        public Task Update(int id)
+        {
+            return _shelterImplementation.Update(id);
+        }
     }
 }

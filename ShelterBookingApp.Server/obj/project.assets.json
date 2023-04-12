@@ -2368,12 +2368,12 @@
     "ShelterBookingApp.Client/1.0.0": {
       "type": "project",
       "path": "../ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
-      "msbuildProject": "../ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
+      "msbuildProject": "../../shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
     },
     "ShelterBookingApp.Shared/1.0.0": {
       "type": "project",
       "path": "../ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
-      "msbuildProject": "../ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
+      "msbuildProject": "../../shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2386,34 +2386,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\": {}
+    "/Users/gustavanderson/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
+      "projectUniqueName": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
       "projectName": "ShelterBookingApp.Server",
-      "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
-      "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Server\\obj\\",
+      "projectPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
+      "packagesPath": "/Users/gustavanderson/.nuget/packages/",
+      "outputPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
-              "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\ShelterbookingProject\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj"
+            "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
+              "projectPath": "/Users/gustavanderson/Library/CloudStorage/GoogleDrive-gustavbroegger@icloud.com/My Drive/IT-Architecture/AppUdvikling/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
             }
           }
         }
@@ -2464,7 +2462,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }
