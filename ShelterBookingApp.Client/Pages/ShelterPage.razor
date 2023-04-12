@@ -20,42 +20,13 @@
 </div>
 
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Capacity</th>
-            <th>Description</th>
-            <th>Municipality</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var shelter in shelters)
-        {
-            <tr>
-                <td>@shelter.Id</td>
-                <td>@shelter.Name</td>
-                <td>@shelter.Capacity</td>
-                <td>@shelter.Description</td>
-                <td>@shelter.Municipality</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-
 
 
 @code {
 
     List<Shelter> shelters = new List<Shelter>
     {
-        new Shelter { Id = "1", Name = "City Shelter", Capacity = 50, Description = "A shelter located in the heart of the city.", Municipality = "Copenhagen" },
-        new Shelter { Id = "2", Name = "Coastal Shelter", Capacity = 25, Description = "A shelter located by the coast with stunning views of the ocean.", Municipality = "Aarhus" },
-        new Shelter { Id = "3", Name = "Mountain Shelter", Capacity = 20, Description = "A shelter located high up in the mountains with breathtaking views.", Municipality = "Viborg" },
-        new Shelter { Id = "4", Name = "Rural Shelter", Capacity = 30, Description = "A shelter located in a peaceful rural area.", Municipality = "Esbjerg" }
+        
     };
 
 }

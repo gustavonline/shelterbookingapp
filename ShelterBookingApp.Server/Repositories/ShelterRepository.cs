@@ -9,7 +9,7 @@ namespace ShelterBookingApp.Server.Repositories
     public class ShelterRepository : IShelter
     {
         private const string connectionString = @"mongodb+srv://admin:W7IZknfnXB1pI2zq@clustershelterdata0.7zlpukv.mongodb.net/test";
-        private const string databaseName = "ShelterDB";
+        private const string databaseName = "shelterDB";
         private const string collectionName = "shelter_minus";
         private IMongoCollection<Shelter> collection;
         private IShelter _shelterImplementation;
@@ -23,10 +23,11 @@ namespace ShelterBookingApp.Server.Repositories
         }
 
 
-        public Task<List<Shelter>> GetAllShelters() {
+        public async Task<List<Shelter>> GetAllShelters() 
+        {
 
-            return collection.Find(i => true).ToListAsync();
-            //return collection.Find(new BsonDocument()).ToListAsync();
+            return await collection.Find(i => true).ToListAsync();
+            //return await collection.Find(new BsonDocument()).ToListAsync();
         }
 
         public Task Update(int id)
