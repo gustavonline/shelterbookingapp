@@ -3,14 +3,20 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace ShelterBookingApp.Shared.Models
 {
+    
     [BsonIgnoreExtraElements]
     public class Shelter
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; } = "";
 
         [BsonElement("properties")]
         public ShelterProperties Properties { get; set; }
+        
+        [BsonElement("bookings")]
+        public ShelterBookings Bookings { get; set; }
+        
     }
 
     [BsonIgnoreExtraElements]

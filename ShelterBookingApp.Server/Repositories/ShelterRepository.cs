@@ -30,5 +30,7 @@ namespace ShelterBookingApp.Server.Repositories
             return collection.Find(new BsonDocument()).ToList();
         }
         
+        
+        
     }
 }

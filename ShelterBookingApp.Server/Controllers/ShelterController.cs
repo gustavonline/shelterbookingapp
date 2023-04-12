@@ -25,7 +25,6 @@ namespace ShelterBookingApp.Server.Controllers
 
         // GET: api/<ShelterController>
         [HttpGet]
-        
         public List<Shelter> GetAllShelters()
         {
             Console.WriteLine("Get all shelters (Controller) ");

@@ -133,6 +133,10 @@
               "target": "Package",
               "version": "[7.0.4, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.19.1, )"
