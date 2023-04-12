@@ -27,6 +27,7 @@
         <th>Name</th>
         <th>Capacity</th>
         <th>Description</th>
+        <th></th>
         <th>Municipality</th>
 
     </tr>
@@ -36,12 +37,12 @@
     {
             
             <tr>
-            <td>@shelter.Properties.Name</td>
-            <td>@shelter.Properties.Capacity</td>
-            <td>@shelter.Properties.Description</td>
-            <td>@shelter.Properties.Municipality</td>
-            <button class="btn--book" type="button" @onclick="()=> GoToPage(shelter.Id)"> BOOK</button>  
-        </tr>
+                <td>@shelter.Properties.Name</td>
+                <td>@shelter.Properties.Capacity</td>
+                <td>@shelter.Properties.Description</td>
+                <td><div class="button-div"><button class="btn btn-success" type="button" @onclick="() => GoToPage(shelter.Id)"> Book</button></div></td>
+                <td>@shelter.Properties.Municipality</td>
+            </tr>
     }
     </tbody>
 </table>
