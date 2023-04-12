@@ -6,7 +6,7 @@ using ShelterBookingApp.Shared.Models;
 
 namespace ShelterBookingApp.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Shelter")]
     [ApiController]
     public class ShelterController : ControllerBase
     {

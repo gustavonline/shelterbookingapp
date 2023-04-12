@@ -10936,32 +10936,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/gustavanderson/.nuget/packages/": {}
+    "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\MiniProjekt\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
       "projectName": "ShelterBookingApp.Server",
-      "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
-      "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-      "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/obj/",
+      "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\MiniProjekt\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
+      "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\MiniProjekt\\shelterbookingapp\\ShelterBookingApp.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
-              "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
+            "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\MiniProjekt\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
+              "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\MiniProjekt\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj"
             }
           }
         }
@@ -11016,7 +11018,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
