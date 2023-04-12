@@ -1,8 +1,49 @@
-﻿@page "/shelter"
+﻿@page "/shelterbooking"
 @inject HttpClient Http; 
 @using ShelterBookingApp.Shared.Models; 
 
 <h3>ShelterPage</h3>
+
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Placering">
+    </div>
+    <div class="col-md-3">
+        <input type="date" class="form-control" placeholder="Check ind">
+    </div>
+    <div class="col-md-3">
+        <input type="date" class="form-control" placeholder="Check Ud">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary btn-block">Søg</button>
+    </div>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Capacity</th>
+            <th>Description</th>
+            <th>Municipality</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shelter in shelters)
+        {
+            <tr>
+                <td>@shelter.Id</td>
+                <td>@shelter.Name</td>
+                <td>@shelter.Capacity</td>
+                <td>@shelter.Description</td>
+                <td>@shelter.Municipality</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 
 
 

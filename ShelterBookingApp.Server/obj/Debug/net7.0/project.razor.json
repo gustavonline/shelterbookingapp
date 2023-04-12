@@ -5081,39 +5081,39 @@
         }
       },
       {
-        "HashCode": -1646377922,
+        "HashCode": 1814924005,
         "Kind": "Components.Component",
-        "Name": "ShelterBookingApp.Client.Pages.ShelterPage",
+        "Name": "ShelterBookingApp.Client.App",
         "AssemblyName": "ShelterBookingApp.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ShelterPage"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ShelterBookingApp.Client.Pages.ShelterPage",
-          "Common.TypeNamespace": "ShelterBookingApp.Client.Pages",
-          "Common.TypeNameIdentifier": "ShelterPage"
+          "Common.TypeName": "ShelterBookingApp.Client.App",
+          "Common.TypeNamespace": "ShelterBookingApp.Client",
+          "Common.TypeNameIdentifier": "App"
         }
       },
       {
-        "HashCode": 1498056324,
+        "HashCode": -895651435,
         "Kind": "Components.Component",
-        "Name": "ShelterBookingApp.Client.Pages.ShelterPage",
+        "Name": "ShelterBookingApp.Client.App",
         "AssemblyName": "ShelterBookingApp.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ShelterBookingApp.Client.Pages.ShelterPage"
+            "TagName": "ShelterBookingApp.Client.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ShelterBookingApp.Client.Pages.ShelterPage",
-          "Common.TypeNamespace": "ShelterBookingApp.Client.Pages",
-          "Common.TypeNameIdentifier": "ShelterPage",
+          "Common.TypeName": "ShelterBookingApp.Client.App",
+          "Common.TypeNamespace": "ShelterBookingApp.Client",
+          "Common.TypeNameIdentifier": "App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -5229,39 +5229,39 @@
         }
       },
       {
-        "HashCode": 1814924005,
+        "HashCode": -1646377922,
         "Kind": "Components.Component",
-        "Name": "ShelterBookingApp.Client.App",
+        "Name": "ShelterBookingApp.Client.Pages.ShelterPage",
         "AssemblyName": "ShelterBookingApp.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "ShelterPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ShelterBookingApp.Client.App",
-          "Common.TypeNamespace": "ShelterBookingApp.Client",
-          "Common.TypeNameIdentifier": "App"
+          "Common.TypeName": "ShelterBookingApp.Client.Pages.ShelterPage",
+          "Common.TypeNamespace": "ShelterBookingApp.Client.Pages",
+          "Common.TypeNameIdentifier": "ShelterPage"
         }
       },
       {
-        "HashCode": -895651435,
+        "HashCode": 1498056324,
         "Kind": "Components.Component",
-        "Name": "ShelterBookingApp.Client.App",
+        "Name": "ShelterBookingApp.Client.Pages.ShelterPage",
         "AssemblyName": "ShelterBookingApp.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ShelterBookingApp.Client.App"
+            "TagName": "ShelterBookingApp.Client.Pages.ShelterPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ShelterBookingApp.Client.App",
-          "Common.TypeNamespace": "ShelterBookingApp.Client",
-          "Common.TypeNameIdentifier": "App",
+          "Common.TypeName": "ShelterBookingApp.Client.Pages.ShelterPage",
+          "Common.TypeNamespace": "ShelterBookingApp.Client.Pages",
+          "Common.TypeNameIdentifier": "ShelterPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
