@@ -56,10 +56,10 @@
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine("Get shelterlist from client ");
-        Shelters = await Http.GetFromJsonAsync<List<Shelter>>(NavManager.ToAbsoluteUri("https://localhost:7269/api/Shelter")); 
+        Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter"); 
 
     }
-
+                 
 
 
 
