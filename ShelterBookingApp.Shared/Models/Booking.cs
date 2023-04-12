@@ -1,37 +1,26 @@
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace ShelterBookingApp.Shared.Models
 {
-    
-    [BsonIgnoreExtraElements]
-    public class ShelterBookings
+    public class Booking
     {
-       [BsonElement("BookingId")]
-    public int BookingId { get; set; }
-    
-    [BsonElement("StartDate")]
-    public DateTime StartDate { get; set; }
-    
-    [BsonElement("EndDate")]
-    public DateTime EndDate { get; set; }
-    
-    [BsonElement("BookeeInfo")]
-    public BookeeInfo BookeeInfo { get; set; }
-    
-    }
-    
-    [BsonIgnoreExtraElements]
-    public class BookeeInfo
-    {
-        [BsonElement("BookeeName")]
-        public string Name { get; set; }
+        [BsonId]
+        public ObjectId ObjectId { get; set; }
         
-        [BsonElement("BookeMobile")]
-        public string Email { get; set; }
+        //Herfra og ned bruges der ikke Bson mapping, da vores variabel navne er ens med vores navne i databasen
         
-        [BsonElement("BookeeAddress")]
-        public string Phone { get; set; }
+        public string ShelterId { get; set; } = "";
+        
+        public DateTime StartDate { get; set; }
+        
+        public DateTime EndDate { get; set; }
+        
+        public string BookeeName { get; set; } = "";
+        
+        public string BookeeAddress { get; set; } = "";
+    
+        public int BookeePhone { get; set; } = 0;
     }
-    
-    
+
 }
