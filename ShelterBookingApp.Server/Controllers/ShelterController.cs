@@ -12,7 +12,7 @@ namespace ShelterBookingApp.Server.Controllers
     {
 
 
-        public readonly IShelter _Ishelter; 
+        public readonly IShelter _Ishelter; // navngive som repo her 
 
 
 

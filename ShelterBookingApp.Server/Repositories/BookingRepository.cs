@@ -26,8 +26,37 @@ public BookingRepository()
         return collection.Find(new BsonDocument()).ToList();
     }
     
-    public void AddBooking(Booking newBooking)
+    public bool AddBooking(Booking newBooking)
     {
-        collection.InsertOne(newBooking);
+        if (IsBookingOverlapping(newBooking)) {
+            return false;
+        } else { 
+            collection.InsertOne(newBooking);
+            return true;
+        }
+    }
+
+    public bool IsBookingOverlapping(Booking newBooking)
+    {
+        //Adding filter that finds a selection of data
+        //Filtering for dates less than
+        var newFilter = Builders<Booking>.Filter.And(
+            Builders<Booking>.Filter.Lte("StartDate", newBooking.EndDate),
+            Builders<Booking>.Filter.Gte("EndDate", newBooking.StartDate)
+        );
+
+        //Getting those data based on filter 
+        var overlappingBookings = collection.Find(newFilter).ToList();
+
+        //If none are found return true
+        if (overlappingBookings.Count > 0)
+        {
+            return true;
+        }
+        //If any are found, return false 
+        else
+        {
+            return false;
+        }
     }
 }

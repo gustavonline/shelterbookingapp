@@ -6,6 +6,7 @@ public interface IBooking
 {
     List<Booking> GetAllBookings();
     
-    void AddBooking(Booking newBooking);
+    bool AddBooking(Booking newBooking);
+    bool IsBookingOverlapping(Booking newBooking); // Adding method for overlap check
 
 }

@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ShelterBookingApp.Client
 build_property.RootNamespace = ShelterBookingApp.Client
-build_property.ProjectDir = C:\Users\Ida Beate Bjørn\Documents\Repositories\shelterbookingapp\ShelterBookingApp.Client\
+build_property.ProjectDir = C:\Users\Stationær\Documents\repositories\shelterbookingapp\ShelterBookingApp.Client\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ida Beate Bjørn\Documents\Repositories\shelterbookingapp\ShelterBookingApp.Client
+build_property.MSBuildProjectDirectory = C:\Users\Stationær\Documents\repositories\shelterbookingapp\ShelterBookingApp.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/App.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Components/BookingsInformationDialog.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Components/BookingsInformationDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCb29raW5nc0luZm9ybWF0aW9uRGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/Counter.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/FetchData.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/Index.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/PedelSide.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/PedelSide.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVkZWxTaWRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/SurveyPrompt.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/_Imports.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/BookingPage.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/BookingPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5j3wo6qx86
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/ShelterPage.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Pages/ShelterPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hlbHRlclBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ngs7tmi7l5
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/MainLayout.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-y6pw4gjpyl
 
-[C:/Users/Ida Beate Bjørn/Documents/Repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/NavMenu.razor]
+[C:/Users/Stationær/Documents/repositories/shelterbookingapp/ShelterBookingApp.Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5xnpbvx076
