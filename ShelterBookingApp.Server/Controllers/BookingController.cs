@@ -14,7 +14,7 @@ namespace ShelterBookingApp.Server.Controllers
     public class BookingController : ControllerBase
     {
         
-        public readonly IBooking _Ibooking;
+        public readonly IBooking _Ibooking; // Navngive det her anderledes, det er et repository 
         
         public BookingController(IBooking iBooking)
         {
@@ -37,11 +37,21 @@ namespace ShelterBookingApp.Server.Controllers
             return "value";
         }
 
-        // POST: api/Booking
+        // POST: api/Booking 
+        // Making this Task<Iactionresult> because this enables http status code use 
         [HttpPost]
-        public void AddBooking(Booking newBooking)
+        public async Task<IActionResult> AddBooking(Booking newBooking) 
         {
-            _Ibooking.AddBooking(newBooking);
+            //If method returns tu
+            if(_Ibooking.AddBooking(newBooking))
+            {
+                return Ok("Shelter successfully booked");
+            }
+            else
+            {
+                return BadRequest("Shelter is occupied on the chosen dates");
+            }
+           
         }
 
         // PUT: api/Booking/5

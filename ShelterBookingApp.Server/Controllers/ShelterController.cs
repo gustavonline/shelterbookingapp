@@ -12,7 +12,7 @@ namespace ShelterBookingApp.Server.Controllers
     {
 
 
-        public readonly IShelter _Ishelter; 
+        public readonly IShelter _Ishelter; // navngive som repo her 
 
 
 
@@ -32,12 +32,7 @@ namespace ShelterBookingApp.Server.Controllers
             return _Ishelter.GetAllShelters();
         }
 
-        // GET api/<ShelterController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+   
 
         // POST api/<ShelterController>
         [HttpPost]
@@ -46,9 +41,14 @@ namespace ShelterBookingApp.Server.Controllers
         }
 
         // PUT api/<ShelterController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        [HttpGet("{shelterId}")]
+        public Shelter GetShelterById(string shelterId)
         {
+ 
+            Console.WriteLine("GetSHelterById controller");
+            Shelter shelter = _Ishelter.GetShelterById(shelterId);
+            return shelter;
         }
 
         // DELETE api/<ShelterController>/5

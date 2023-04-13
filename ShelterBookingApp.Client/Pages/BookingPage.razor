@@ -1,0 +1,124 @@
+﻿@page "/booking"
+@using ShelterBookingApp.Shared.Models;
+@inject HttpClient Http; 
+@using Radzen.Blazor; 
+
+
+<h3>Booking</h3>
+@*<h1>@shelterId</h1>*@
+
+@if(yourShelter != null)
+{
+    <p>You have chosen: @yourShelter.Properties.Name</p>
+}
+
+<p>To book a shelter, please provide us with your personal information below</p>
+
+
+<EditForm EditContext="@editContext" class="row p-3" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-12 mb-3">
+        <label for="Name">Name</label>
+        <InputText id="Name" @bind-Value="newBooking.BookeeName" class="form-control" />
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="Price">PhoneNumber</label>
+        <InputNumber id="Phone" @bind-Value="newBooking.BookeePhone" class="form-control" />
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="Amount">Address</label>
+        <InputText id="Address" @bind-Value="newBooking.BookeeAddress" class="form-control" />
+    </div>
+   <div>
+        <label for="StartDate">From: </label>
+		<InputDate class="col-md-4 mb-3" @bind-Value="@newBooking.StartDate" />
+   </div>
+   <div>
+        <label for="EndDate">To: &nbsp;  &nbsp;  </label>
+		<InputDate class="col-md-4 mb-3" @bind-Value="@newBooking.EndDate" />
+
+   </div>
+   
+    <div class="col-12 mb-3">
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </div>
+</EditForm>
+
+
+
+
+
+<div>
+	<p>Number of guests: @numberOfGuests</p>
+    <p>From: @newBooking.StartDate.ToString("D")</p>
+    <p>To: @newBooking.EndDate.ToString("D")</p>
+</div>
+
+<p>@errorMessage</p>
+
+
+
+
+@code {
+
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? shelterId { get; set; }
+    public Shelter? yourShelter { get; set; }
+    private string? startDate = DateTime.Now.ToString("D");
+    private string? endDate = DateTime.Now.ToString("D");
+    private int? numberOfGuests;
+    private Booking newBooking { get; set; } = new Booking();
+    public EditContext editContext;
+    private string errorMessage; 
+
+    
+    protected override async Task OnInitializedAsync()
+    {
+        editContext = new EditContext(newBooking);
+        newBooking.StartDate = DateTime.Now;
+        newBooking.EndDate = DateTime.Now; 
+
+        if (shelterId != null)
+        {
+            // retrieve the Shelter object with the specified shelterId
+            var shelter = await Http.GetFromJsonAsync<Shelter>("https://localhost:7269/api/Shelter/" + shelterId);
+
+            // set the Shelter object as a property of this component
+            yourShelter = shelter;
+
+
+        }
+
+    }
+
+    public async Task HandleValidSubmit()
+    {
+        await CreateBooking(); 
+    }
+
+
+
+    public async Task CreateBooking()
+    {
+        newBooking.ObjectId = "";
+        newBooking.ShelterId = shelterId;
+        var response = await Http.PostAsJsonAsync<Booking>("https://localhost:7269/api/Booking", newBooking);
+
+        //Setting responsemessage 
+        errorMessage = await response.Content.ReadAsStringAsync();
+
+        //Setting newbooking
+        newBooking.ObjectId = "";
+        newBooking.ShelterId = shelterId;
+        
+    }
+
+      
+
+    
+
+
+}
