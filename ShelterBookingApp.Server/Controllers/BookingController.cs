@@ -31,11 +31,15 @@ namespace ShelterBookingApp.Server.Controllers
         }
 
         // GET: api/Booking/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{shelterId}")]
+        public List<Booking> GetBookingsById(string shelterId)
         {
-            return "value";
+            Console.WriteLine("Get bookings by id");
+            List<Booking> bookings = _Ibooking.GetBookingsById(shelterId);
+            return bookings;
         }
+
+
 
         // POST: api/Booking 
         // Making this Task<Iactionresult> because this enables http status code use 

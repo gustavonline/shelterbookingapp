@@ -42,6 +42,9 @@
 
 
 @code {
+    
+    [Parameter]
+    public string ShelterId { get; set; }
 
 
     private List<Booking>? Bookings { get; set; } = new();
@@ -49,7 +52,8 @@
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine("Get bookingslist from client ");
-        Bookings = await Http.GetFromJsonAsync<List<Booking>>("https://localhost:7269/api/Booking");
+        Bookings = await Http.GetFromJsonAsync<List<Booking>>($"https://localhost:7269/api/Booking/{ShelterId}");
     }
+
 
 }

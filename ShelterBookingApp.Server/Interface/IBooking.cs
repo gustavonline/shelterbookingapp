@@ -9,4 +9,6 @@ public interface IBooking
     bool AddBooking(Booking newBooking);
     bool IsBookingOverlapping(Booking newBooking); // Adding method for overlap check
 
+    public List<Booking> GetBookingsById(string shelterId);
+
 }

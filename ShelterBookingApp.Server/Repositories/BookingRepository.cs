@@ -58,5 +58,15 @@ public BookingRepository()
         {
             return false;
         }
+        
     }
+    
+    //Get bookings by ShelterId
+    public List<Booking> GetBookingsById(string shelterId)
+    {
+        Console.WriteLine("Get bookings by ID repo:");
+        var filter = Builders<Booking>.Filter.Eq("ShelterId", shelterId);
+        return collection.Find(filter).ToList();
+    }
+
 }

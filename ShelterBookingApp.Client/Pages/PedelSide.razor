@@ -33,8 +33,7 @@
             <td>@shelter.Properties.Capacity</td>
             <td>@shelter.Properties.Municipality</td>
             <td>
-                <button class="btn btn-success" type="button" @onclick="() => ShowBookingInformation()">Show booking information</button>
-
+                <button class="btn btn-success" type="button" @onclick="() => ShowBookingInformation(shelter.Id)">Show booking information</button>
             </td>
         </tr>
     }
@@ -52,9 +51,12 @@
     }
 
 
-    private void ShowBookingInformation()
+    private void ShowBookingInformation(string ShelterId)
     {
-        ModalService.Show<BookingsInformationDialog>("Booking information", new ModalOptions { Size = ModalSize.ExtraLarge });
+        var parameters = new ModalParameters();
+        parameters.Add(nameof(BookingsInformationDialog.ShelterId), ShelterId);
+        ModalService.Show<BookingsInformationDialog>("Booking information", parameters, new ModalOptions { Size = ModalSize.Large });
     }
+
 
 }
