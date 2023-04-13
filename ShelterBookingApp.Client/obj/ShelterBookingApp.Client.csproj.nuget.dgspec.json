@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {}
+    "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {}
   },
   "projects": {
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
+    "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
         "projectName": "ShelterBookingApp.Client",
-        "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
-        "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-        "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/obj/",
+        "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
+        "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
-                "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
+              "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj"
               }
             }
           }
@@ -62,6 +64,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.19.1, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[4.9.1, )"
             }
           },
           "imports": [
@@ -86,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -95,22 +101,24 @@
         }
       }
     },
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
+    "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
         "projectName": "ShelterBookingApp.Shared",
-        "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
-        "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-        "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/obj/",
+        "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,6 +144,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.19.1, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[4.9.1, )"
             }
           },
           "imports": [
@@ -154,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
