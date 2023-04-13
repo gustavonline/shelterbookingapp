@@ -1,0 +1,130 @@
+﻿@page "/booking"
+@using ShelterBookingApp.Shared.Models;
+@inject HttpClient Http; 
+
+
+<h3>Booking</h3>
+<h3>@shelterId</h3>
+
+<p>You have chosen: @yourShelter.Properties.Name</p>
+
+
+<EditForm EditContext="@editContext" class="row p-3" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-12 mb-3">
+        <label for="Name">Name</label>
+        <InputText id="Name" @bind-Value="newBooking.BookeeName" class="form-control" />
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="Price">PhoneNumber</label>
+        <InputNumber id="Price" @bind-Value="newBooking.BookeePhone" class="form-control" />
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="Amount">Amount</label>
+        <InputNumber id="Amount" @bind-Value="newBooking.BookeeAddress" class="form-control" />
+    </div>
+    <div class="col-12 mb-3">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</EditForm>
+
+ @* <div class="sm:col-span-3" height="300px">
+            <label for="numberOfGuests" class="block text-sm font-medium leading-6 text-gray-900">How many will u be?</label>
+            <div class="mt-2">
+                <select @bind="numberOfGuests" id="numberOfGuests" name="numberOfGuests"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+        </div>*@
+
+
+@*<div class="container">
+    <div class="rz-p-12 rz-text-align-center startDate">
+         <RadzenDatePicker  TValue="DateTime?" Value=@startDate Change="@(args => newBooking.StartDate = args)" />
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center endDate">
+        <RadzenDatePicker  TValue="DateTime?" Value=@endDate Change="@(args => newBooking.EndDate = args)" />
+    </div>
+</div>*@
+
+
+
+
+@*<div>
+	<p>Number of guests: @numberOfGuests</p>
+    <p>From: @newBooking.StartDate?.ToString("D")</p>
+    <p>To: @newBooking.EndDate.ToString("D")</p>
+</div>
+
+
+<div class="div--btnConfirm">
+    <button type="button" @onclick="()=>CreateBooking()"></button>
+</div>
+*@
+
+@*<div class="div--btnConfirm">  
+    <button type="button" @onclick="()=>ConfirmBooking()"></button>
+</div>*@
+
+@code {
+
+
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? shelterId { get; set; }
+
+    public Shelter yourShelter { get; set; } = new Shelter();
+    private string? startDate = DateTime.Now.ToString("D");
+    private string? endDate = DateTime.Now.ToString("D");
+    private int? numberOfGuests;
+    //private int? userId { get; set; }
+    private Booking newBooking { get; set; } = new Booking();
+    private DateTime bookingDate { get; set; } = DateTime.Now;
+    private EditContext editContext; 
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("OnInitalized test på client");
+
+        if (shelterId != null)
+        {
+            Console.WriteLine("OnInitialized metode på client test: ");
+            // retrieve the Shelter object with the specified shelterId
+            var shelter = await Http.GetFromJsonAsync<Shelter>("https://localhost:7269/api/Shelter/" + shelterId);
+
+            // set the Shelter object as a property of this component
+            yourShelter = shelter;
+            Console.Write("Test" + shelter.Properties.Name);
+
+        }
+
+
+    }
+
+    public async Task HandleValidSubmit()
+    {
+        // call the CreateBooking method 
+    }
+
+    //public async void CreateBooking()
+    //{
+    //    //await http.CreateBooking metode fra controlleren 
+    //    newBooking = new Booking(); 
+    //}
+
+
+}

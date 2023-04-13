@@ -33,10 +33,12 @@ namespace ShelterBookingApp.Server.Controllers
         }
 
         // GET api/<ShelterController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{shelterId}")]
+        public Shelter GetShelterById(string shelterId)
         {
-            return "value";
+            Console.WriteLine("GetSHelterById controller");
+            Shelter shelter = _Ishelter.GetShelterById(shelterId);
+            return shelter; 
         }
 
         // POST api/<ShelterController>

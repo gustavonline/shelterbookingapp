@@ -29,8 +29,31 @@ namespace ShelterBookingApp.Server.Repositories
             //return await collection.Find(i => true).ToListAsync();
             return collection.Find(new BsonDocument()).ToList();
         }
-        
-        
-        
+
+        //Metode der returnerer et shelter baseret på id
+        public Shelter GetShelterById(string shelterId)
+        {
+           
+
+            Console.WriteLine("Get shelter by ID repo:");
+            var filter = Builders<Shelter>.Filter.Eq("_id", ObjectId.Parse(shelterId));
+            var shelter = collection.Find(filter).FirstOrDefault();
+            return shelter;
+
+
+            //Console.WriteLine("Get shelter by ID repo:");
+            //Shelter shelter = (Shelter)collection.Find(new BsonDocument("Id", shelterId));
+            //return shelter;
+
+            //var filter = Builders<Shelter>.Filter.Eq(s => s.Id, id);
+            //return collection.Find(filter).FirstOrDefault();
+
+
+        }
+
+
+
+
+
     }
 }
