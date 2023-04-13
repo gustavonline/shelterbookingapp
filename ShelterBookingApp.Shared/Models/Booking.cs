@@ -6,12 +6,13 @@ namespace ShelterBookingApp.Shared.Models
     public class Booking
     {
         [BsonId]
-        public ObjectId ObjectId { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         
         //Herfra og ned bruges der ikke Bson mapping, da vores variabel navne er ens med vores navne i databasen
         
         public string ShelterId { get; set; } = "";
-        
+
         public DateTime StartDate { get; set; }
         
         public DateTime EndDate { get; set; }
