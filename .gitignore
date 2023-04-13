@@ -838,3 +838,5 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/rider,macos,aspnetcore,windows,visualstudio,csharp
+ShelterBookingApp.Server/obj/Debug/net7.0/ShelterBookingApp.Server.csproj.AssemblyReference.cache
+ShelterBookingApp.Client/obj/Debug/net7.0/ShelterBookingApp.Client.csproj.AssemblyReference.cache
