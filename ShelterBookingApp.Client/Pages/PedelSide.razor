@@ -2,6 +2,7 @@
 @using ShelterBookingApp.Shared.Models
 @inject HttpClient Http;
 @inject NavigationManager NavManager;
+@inject IModalService ModalService;
 
 <h3>Pedelside</h3>
 
@@ -32,41 +33,28 @@
             <td>@shelter.Properties.Capacity</td>
             <td>@shelter.Properties.Municipality</td>
             <td>
-                <button class="btn btn-success" type="button" @onclick="() => OpenDeleteDialog()">Show booking information</button>
+                <button class="btn btn-success" type="button" @onclick="() => ShowBookingInformation()">Show booking information</button>
+
             </td>
         </tr>
     }
     </tbody>
 </table>
-@if (DeleteDialogOpen)
-{
-    <BookingsInformationDialog OnClose="OnDeleteDialogClose"></BookingsInformationDialog>
-}
 
 @code {
 
-    private bool DeleteDialogOpen { get; set; }
-
-    private void OnDeleteDialogClose(bool accepted)
-    {
-        DeleteDialogOpen = false;
-        StateHasChanged();
-    }
-
-    private void OpenDeleteDialog()
-    {
-        DeleteDialogOpen = true;
-        StateHasChanged();
-    }
-
     private List<Shelter> Shelters { get; set; } = new();
-
-    private List<Booking> Bookings { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine("Get shelterlist from client ");
         Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+    }
+
+
+    private void ShowBookingInformation()
+    {
+        ModalService.Show<BookingsInformationDialog>("Booking information", new ModalOptions { Size = ModalSize.ExtraLarge });
     }
 
 }

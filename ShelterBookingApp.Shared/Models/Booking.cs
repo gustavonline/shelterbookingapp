@@ -6,7 +6,8 @@ namespace ShelterBookingApp.Shared.Models
     public class Booking
     {
         [BsonId]
-        public ObjectId ObjectId { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string BookingId { get; set; } = "";
         
         //Herfra og ned bruges der ikke Bson mapping, da vores variabel navne er ens med vores navne i databasen
         

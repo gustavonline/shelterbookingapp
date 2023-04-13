@@ -9,7 +9,7 @@ using ShelterBookingApp.Shared.Models;
 
 namespace ShelterBookingApp.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Booking")]
     [ApiController]
     public class BookingController : ControllerBase
     {
@@ -25,7 +25,7 @@ namespace ShelterBookingApp.Server.Controllers
         [HttpGet]
         public List<Booking> GetAllBookings()
         {
-            Console.WriteLine("Get all bookings(Controller) ");
+            Console.WriteLine("Get all bookings ");
 
             return _Ibooking.GetAllBookings();
         }

@@ -26,6 +26,8 @@ public BookingRepository()
         return collection.Find(new BsonDocument()).ToList();
     }
     
+    
+    
     public void AddBooking(Booking newBooking)
     {
         collection.InsertOne(newBooking);

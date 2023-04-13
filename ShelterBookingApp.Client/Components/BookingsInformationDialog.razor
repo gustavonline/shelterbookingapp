@@ -1,67 +1,55 @@
-<div class="modal fade show" id="myModal" style="display:block; background-color: rgba(10,10,10,.8);" aria-modal="true" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">@Title</h4>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>@Text</p>
-            </div>
-            <div class="modal-footer">
-                @switch (DialogType)
-                {
-                    case ModalDialogType.Ok:
-                        <button type="button" class="btn btn-primary" @onclick=@ModalOk>OK</button>
-                        break;
-                    case ModalDialogType.OkCancel:
-                        <button type="button" class="btn" @onclick="@ModalCancel">Cancel</button>
-                        <button type="button" class="btn btn-primary" @onclick=@ModalOk>OK</button>
-                        break;
-                    case ModalDialogType.DeleteCancel:
-                        <button type="button" class="btn" @onclick="@ModalCancel">Cancel</button>
-                        break;
-                }
-            </div>
+@using ShelterBookingApp.Shared.Models
+@using Blazored.Modal
+@using Blazored.Modal.Services
+@inject HttpClient Http;
+
+<div>
+    <ModalHeader>
+        <h4 class="modal-title">Booking information for</h4>
+    </ModalHeader>
+    <ModalContent>
+        <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Booking Id</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Booke Name</th>
+                <th>Bookee Address</th>
+                <th>Bookee Phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var booking in Bookings)
+            {
+                <tr>
+                    <td>@booking.BookingId</td>
+                    <td>@booking.StartDate</td>
+                    <td>@booking.EndDate</td>
+                    <td>@booking.BookeeName</td>
+                    <td>@booking.BookeeAddress</td>
+                    <td>@booking.BookeePhone</td>
+                </tr>
+            }
+            </tbody>
+        </table>
         </div>
-    </div>
+    </ModalContent>
+    <ModalFooter>
+    </ModalFooter>
 </div>
 
 
 @code {
 
-    [Parameter]
-    public string Title { get; set; }
 
-    [Parameter]
-    public string Text { get; set; }
+    private List<Booking>? Bookings { get; set; } = new();
 
-
-    [Parameter]
-    public EventCallback<bool> OnClose { get; set; }
-
-
-    [Parameter]
-    public ModalDialogType DialogType { get; set; }
-
-
-    private Task ModalCancel()
+    protected override async Task OnInitializedAsync()
     {
-        return OnClose.InvokeAsync(false);
-    }
-
-
-    private Task ModalOk()
-    {
-        return OnClose.InvokeAsync(true);
-    }
-
-
-    public enum ModalDialogType
-    {
-        Ok,
-        OkCancel,
-        DeleteCancel
+        Console.WriteLine("Get bookingslist from client ");
+        Bookings = await Http.GetFromJsonAsync<List<Booking>>("https://localhost:7269/api/Booking");
     }
 
 }
