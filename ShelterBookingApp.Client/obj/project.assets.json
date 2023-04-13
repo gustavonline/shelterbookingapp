@@ -3076,34 +3076,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stationær\\.nuget\\packages\\": {}
+    "/Users/gustavanderson/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stationær\\Documents\\repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
+      "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
       "projectName": "ShelterBookingApp.Client",
-      "projectPath": "C:\\Users\\Stationær\\Documents\\repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
-      "packagesPath": "C:\\Users\\Stationær\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stationær\\Documents\\repositories\\shelterbookingapp\\ShelterBookingApp.Client\\obj\\",
+      "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+      "packagesPath": "/Users/gustavanderson/.nuget/packages/",
+      "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Stationær\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Stationær\\Documents\\repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
-              "projectPath": "C:\\Users\\Stationær\\Documents\\repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj"
+            "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
+              "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
             }
           }
         }
@@ -3158,7 +3156,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[7.0.5, 7.0.5]"
+            "version": "[7.0.4, 7.0.4]"
           }
         ],
         "frameworkReferences": {
@@ -3166,7 +3164,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
