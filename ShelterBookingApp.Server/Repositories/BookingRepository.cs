@@ -30,4 +30,9 @@ public BookingRepository()
     {
         collection.InsertOne(newBooking);
     }
+
+    public void DeleteBooking(string id)
+    {
+        collection.DeleteOne(booking => booking.Id == id);
+    }
 }

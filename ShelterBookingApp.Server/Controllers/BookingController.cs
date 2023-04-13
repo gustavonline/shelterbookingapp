@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShelterBookingApp.Server.Interface;
 using ShelterBookingApp.Shared.Models; 
+using MongoDB.Bson;
 
 namespace ShelterBookingApp.Server.Controllers
 {
@@ -13,14 +14,14 @@ namespace ShelterBookingApp.Server.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        
+
         public readonly IBooking _Ibooking;
-        
+
         public BookingController(IBooking iBooking)
         {
             _Ibooking = iBooking;
         }
-        
+
         // GET: api/Booking
         [HttpGet]
         public List<Booking> GetAllBookings()
@@ -50,10 +51,12 @@ namespace ShelterBookingApp.Server.Controllers
         {
         }
 
-        // DELETE: api/Booking/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // DELETE api/booking/5
+        [HttpDelete("/delete/{id}")]
+        public void DeleteBooking(string id)
         {
+            Console.WriteLine("Deleted booking");
+            _Ibooking.DeleteBooking(id);
         }
     }
 }
