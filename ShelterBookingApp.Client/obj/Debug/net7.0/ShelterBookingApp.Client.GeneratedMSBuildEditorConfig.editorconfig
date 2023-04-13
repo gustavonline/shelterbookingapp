@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/Components/BookingsInformationDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Cb29raW5nc0luZm9ybWF0aW9uRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/Pages/PedelSide.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVkZWxTaWRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/Shared/SurveyPrompt.razor]

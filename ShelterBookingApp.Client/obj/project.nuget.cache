@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "r/vdeKh9jP+LTTfMcIgqkT+qu7/Z90f4pxd0s1fUBu1s2P/SZEs63CpYXr4te+xFhJEECu0rdBSNEjgv2Y4RhQ==",
+  "dgSpecHash": "4FFiXwi/cpuH5frIa4WooYth69kAFAyrdwN1VMgot6fkGlfzGAJaTreSTPPkE2nAVr5WPW3BT5gi1RU0LDoiOA==",
   "success": true,
   "projectFilePath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
   "expectedPackageFiles": [
     "/Users/gustavanderson/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/gustavanderson/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
+    "/Users/gustavanderson/.nuget/packages/blazored.modal/7.1.0/blazored.modal.7.1.0.nupkg.sha512",
     "/Users/gustavanderson/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
     "/Users/gustavanderson/.nuget/packages/microsoft.aspnetcore.authorization/7.0.4/microsoft.aspnetcore.authorization.7.0.4.nupkg.sha512",
     "/Users/gustavanderson/.nuget/packages/microsoft.aspnetcore.components/7.0.4/microsoft.aspnetcore.components.7.0.4.nupkg.sha512",

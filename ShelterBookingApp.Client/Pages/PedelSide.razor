@@ -1,0 +1,72 @@
+@page "/PedelSide"
+@using ShelterBookingApp.Shared.Models
+@inject HttpClient Http;
+@inject NavigationManager NavManager;
+
+<h3>Pedelside</h3>
+
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Shelter name">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary btn-block">Search</button>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Municipality</th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var shelter in Shelters)
+    {
+        <tr>
+            <td>@shelter.Properties.Name</td>
+            <td>@shelter.Properties.Capacity</td>
+            <td>@shelter.Properties.Municipality</td>
+            <td>
+                <button class="btn btn-success" type="button" @onclick="() => OpenDeleteDialog()">Show booking information</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+@if (DeleteDialogOpen)
+{
+    <BookingsInformationDialog OnClose="OnDeleteDialogClose"></BookingsInformationDialog>
+}
+
+@code {
+
+    private bool DeleteDialogOpen { get; set; }
+
+    private void OnDeleteDialogClose(bool accepted)
+    {
+        DeleteDialogOpen = false;
+        StateHasChanged();
+    }
+
+    private void OpenDeleteDialog()
+    {
+        DeleteDialogOpen = true;
+        StateHasChanged();
+    }
+
+    private List<Shelter> Shelters { get; set; } = new();
+
+    private List<Booking> Bookings { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Get shelterlist from client ");
+        Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+    }
+
+}
