@@ -27,9 +27,6 @@ namespace ShelterBookingApp.Shared.Models
         [BsonElement("antal_pl")]
         public int Capacity { get; set; }
 
-        [BsonElement("beskrivels")]
-        public string Description { get; set; }
-
         [BsonElement("cvr_navn")]
         public string Municipality { get; set; }
     }
