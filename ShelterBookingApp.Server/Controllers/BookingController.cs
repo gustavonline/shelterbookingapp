@@ -53,7 +53,7 @@ namespace ShelterBookingApp.Server.Controllers
             }
             else
             {
-                return BadRequest("Shelter is occupied on the chosen dates");
+                return BadRequest("");
             }
            
         }

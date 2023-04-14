@@ -17,12 +17,14 @@ namespace ShelterBookingApp.Shared.Models
         public DateTime StartDate { get; set; }
         [Required]
         public DateTime EndDate { get; set; }
-        [Required]
+        [Required(ErrorMessage = "The name field is required")]
         public string BookeeName { get; set; } = "";
-        [Required]
+        [Required(ErrorMessage = "The address field is required")]
         public string BookeeAddress { get; set; } = "";
-        [Required]
-     
+
+
+        //Specifies a match of exactly 8 digits.The "^" and "$" characters anchor the pattern to the beginning and end of the string
+        [RegularExpression(@"^\d{8}$", ErrorMessage = "The phonenumber must be at least 8 characters (Danish PhoneNumber).")]
         public int BookeePhone { get; set; }
     }
 
