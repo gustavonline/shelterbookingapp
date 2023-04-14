@@ -8,6 +8,16 @@
 
 <h3>ShelterPage</h3>
 
+@if (IsLoading)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="card-deck">
+    </div>
+}
+
 <div class="row">
     <div class="col-md-3">
         <input type="text" class="form-control" placeholder="Placering">
@@ -54,35 +64,56 @@
 @code {
     private List<Shelter> Shelters { get; set; } = new List<Shelter>();
 
+
+
+    private bool IsLoading = true;
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("Get shelterlist from client ");
-        Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter"); 
+        try
+        {
 
+            IsLoading = true;
+            Console.WriteLine("Get shelterlist from client ");
+            Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally
+        {
+            IsLoading = false;
+        }
     }
-                 
+
+
+
+
+
 
 
 
     public void GoToPage(string shelterId)
     {
-        
+
         NavManager.NavigateTo($"/booking?shelterId={shelterId}");
     }
 
 
 
 
-        // Gammel version 
-        //var response = await Http.GetAsync(NavManager.ToAbsoluteUri("https://localhost:7269/api/shelter"));
-        //if (response.IsSuccessStatusCode)
-        //{
-        //    var content = await response.Content.ReadAsStringAsync();
-        //    Shelters = JsonSerializer.Deserialize<List<Shelter>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        //}
-        //else
-        //{
-        //    Console.WriteLine($"Error fetching shelters: {response.StatusCode}");
-        //}
-    
+
+
+    // Gammel version 
+    //var response = await Http.GetAsync(NavManager.ToAbsoluteUri("https://localhost:7269/api/shelter"));
+    //if (response.IsSuccessStatusCode)
+    //{
+    //    var content = await response.Content.ReadAsStringAsync();
+    //    Shelters = JsonSerializer.Deserialize<List<Shelter>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    //}
+    //else
+    //{
+    //    Console.WriteLine($"Error fetching shelters: {response.StatusCode}");
+    //}
+
 }
