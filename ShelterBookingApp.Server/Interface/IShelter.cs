@@ -7,5 +7,6 @@ namespace ShelterBookingApp.Server.Interface
         List<Shelter> GetAllShelters();
 
         Shelter GetShelterById(string id);
+       
     }
 }

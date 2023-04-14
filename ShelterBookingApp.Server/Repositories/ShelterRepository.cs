@@ -30,7 +30,8 @@ namespace ShelterBookingApp.Server.Repositories
             return collection.Find(new BsonDocument()).ToList();
         }
         
-        
+
+
         public Shelter GetShelterById(string shelterId)
         {
           

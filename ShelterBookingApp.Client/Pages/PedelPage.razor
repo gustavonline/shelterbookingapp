@@ -1,4 +1,4 @@
-@page "/PedelSide"
+@page "/PedelPage"
 @using ShelterBookingApp.Shared.Models
 @inject HttpClient Http;
 @inject NavigationManager NavManager;
@@ -8,10 +8,8 @@
 
 <div class="row">
     <div class="col-md-3">
-        <input type="text" class="form-control" placeholder="Shelter name">
-    </div>
-    <div class="col-md-3">
-        <button class="btn btn-primary btn-block">Search</button>
+        @* @OnInput created in order to filter the list of shelters *@
+        <input type="text" class="form-control" placeholder="Search by Shelter Name" @bind="SearchInput" @oninput="FilterShelters">
     </div>
 </div>
 
@@ -22,11 +20,10 @@
         <th>Capacity</th>
         <th>Municipality</th>
         <th></th>
-
     </tr>
     </thead>
     <tbody>
-    @foreach (var shelter in Shelters)
+    @foreach (var shelter in FilteredShelters)
     {
         <tr>
             <td>@shelter.Properties.Name</td>
@@ -43,13 +40,26 @@
 @code {
 
     private List<Shelter> Shelters { get; set; } = new();
+    // New list and property to hold the filtered shelters
+    private List<Shelter> FilteredShelters { get; set; } = new();
+    private string SearchInput { get; set; } = "";
 
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine("Get shelterlist from client ");
         Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+        FilteredShelters = Shelters;
     }
 
+    
+    // Using change event to filter the list of shelters. Using LINQ where method to filter the list of shelters based on the search input.
+    private void FilterShelters(ChangeEventArgs e)
+    {
+        SearchInput = e.Value.ToString();
+        FilteredShelters = string.IsNullOrWhiteSpace(SearchInput)
+            ? Shelters
+            : Shelters.Where(s => s.Properties.Name.Contains(SearchInput, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
 
     private void ShowBookingInformation(string ShelterId)
     {
@@ -57,6 +67,4 @@
         parameters.Add(nameof(BookingsInformationDialog.ShelterId), ShelterId);
         ModalService.Show<BookingsInformationDialog>("Booking information", parameters, new ModalOptions { Size = ModalSize.Large });
     }
-
-
 }

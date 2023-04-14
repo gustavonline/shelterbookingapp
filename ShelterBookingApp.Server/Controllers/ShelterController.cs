@@ -32,7 +32,7 @@ namespace ShelterBookingApp.Server.Controllers
             return _Ishelter.GetAllShelters();
         }
 
-   
+
 
         // POST api/<ShelterController>
         [HttpPost]
