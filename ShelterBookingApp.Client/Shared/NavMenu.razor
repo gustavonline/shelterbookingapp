@@ -23,10 +23,15 @@
 </nav>
 
 @code {
+    // nav menu sættes til at være ikke synligt.
     private bool collapseNavMenu = true;
+
+    //Udseene ændres baseret på om den er kollapset eller ej - hvis collapset, intet styling addes. Hvis ikke collapsed sættes
+    // styling for at gøre den synlig.
     private string? NavBarCssClass => collapseNavMenu ? null : "show";
     private string? NavButtonCssClass => collapseNavMenu ? "collapsed" : null;
 
+    //  ændrer værdien af "collapseNavMenu" fra sand til falsk eller omvendt
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
