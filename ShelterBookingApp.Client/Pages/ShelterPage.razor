@@ -71,15 +71,11 @@ else
     {
         try
         {
-
             IsLoading = true;
             Console.WriteLine("Get shelterlist from client ");
             Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
         }
-        catch (Exception ex)
-        {
-
-        }
+        // 
         finally
         {
             IsLoading = false;
