@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {}
+    "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {}
   },
   "projects": {
-    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
+    "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+        "projectUniqueName": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
         "projectName": "ShelterBookingApp.Client",
-        "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
-        "packagesPath": "/Users/markelgaard/.nuget/packages/",
-        "outputPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/obj/",
+        "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj",
+        "packagesPath": "C:\\Users\\brolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/markelgaard/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\brolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
-                "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
+              "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj"
               }
             }
           }
@@ -90,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -99,22 +105,28 @@
         }
       }
     },
-    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
+    "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
         "projectName": "ShelterBookingApp.Shared",
-        "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
-        "packagesPath": "/Users/markelgaard/.nuget/packages/",
-        "outputPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/obj/",
+        "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\brolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/markelgaard/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\brolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -162,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
