@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {}
+    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {}
   },
   "projects": {
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
+    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+        "projectUniqueName": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
         "projectName": "ShelterBookingApp.Client",
-        "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
-        "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-        "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/obj/",
+        "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj",
+        "packagesPath": "/Users/markelgaard/.nuget/packages/",
+        "outputPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+          "/Users/markelgaard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
-                "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
+              "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
+                "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj"
               }
             }
           }
@@ -99,17 +99,17 @@
         }
       }
     },
-    "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
+    "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
+        "projectUniqueName": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
         "projectName": "ShelterBookingApp.Shared",
-        "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
-        "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-        "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Shared/obj/",
+        "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/ShelterBookingApp.Shared.csproj",
+        "packagesPath": "/Users/markelgaard/.nuget/packages/",
+        "outputPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+          "/Users/markelgaard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

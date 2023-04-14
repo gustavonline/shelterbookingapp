@@ -11165,19 +11165,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/gustavanderson/.nuget/packages/": {}
+    "/Users/markelgaard/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
+      "projectUniqueName": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
       "projectName": "ShelterBookingApp.Server",
-      "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
-      "packagesPath": "/Users/gustavanderson/.nuget/packages/",
-      "outputPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Server/obj/",
+      "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Server/ShelterBookingApp.Server.csproj",
+      "packagesPath": "/Users/markelgaard/.nuget/packages/",
+      "outputPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gustavanderson/.nuget/NuGet/NuGet.Config"
+        "/Users/markelgaard/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -11189,8 +11189,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
-              "projectPath": "/Users/gustavanderson/Downloads/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
+            "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj": {
+              "projectPath": "/Users/markelgaard/RiderProjects/shelterbookingapp/ShelterBookingApp.Client/ShelterBookingApp.Client.csproj"
             }
           }
         }
