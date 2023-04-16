@@ -12,13 +12,13 @@ namespace ShelterBookingApp.Server.Controllers
     {
 
 
-        public readonly IShelter _Ishelter; // navngive som repo her 
+        public readonly IShelter shelterRepository; // navngive som repo her 
 
 
 
         public ShelterController(IShelter ishelter)
         {
-            _Ishelter = ishelter;
+            shelterRepository = ishelter;
         }
 
 
@@ -29,16 +29,10 @@ namespace ShelterBookingApp.Server.Controllers
         {
             Console.WriteLine("Get all shelters (Controller) ");
 
-            return _Ishelter.GetAllShelters();
+            return shelterRepository.GetAllShelters();
         }
 
 
-
-        // POST api/<ShelterController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
 
         // PUT api/<ShelterController>/5
 
@@ -47,13 +41,20 @@ namespace ShelterBookingApp.Server.Controllers
         {
  
             Console.WriteLine("GetSHelterById controller");
-            Shelter shelter = _Ishelter.GetShelterById(shelterId);
+            Shelter shelter = shelterRepository.GetShelterById(shelterId);
             return shelter;
         }
 
         // DELETE api/<ShelterController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
+        {
+        }
+
+
+        // POST api/<ShelterController>
+        [HttpPost]
+        public void Post([FromBody] string value)
         {
         }
     }

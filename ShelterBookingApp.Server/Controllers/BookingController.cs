@@ -13,12 +13,12 @@ namespace ShelterBookingApp.Server.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        
-        public readonly IBooking _Ibooking; // Navngive det her anderledes, det er et repository 
+
+        public readonly IBooking bookingRepository; // Navngive det her anderledes, det er et repository 
         
         public BookingController(IBooking iBooking)
         {
-            _Ibooking = iBooking;
+            bookingRepository = iBooking;
         }
         
         // GET: api/Booking
@@ -27,7 +27,7 @@ namespace ShelterBookingApp.Server.Controllers
         {
             Console.WriteLine("Get all bookings ");
 
-            return _Ibooking.GetAllBookings();
+            return bookingRepository.GetAllBookings();
         }
 
         // GET: api/Booking/5
@@ -35,7 +35,7 @@ namespace ShelterBookingApp.Server.Controllers
         public List<Booking> GetBookingsById(string shelterId)
         {
             Console.WriteLine("Get bookings by id");
-            List<Booking> bookings = _Ibooking.GetBookingsById(shelterId);
+            List<Booking> bookings = bookingRepository.GetBookingsById(shelterId);
             return bookings;
         }
 
@@ -47,13 +47,13 @@ namespace ShelterBookingApp.Server.Controllers
         public async Task<IActionResult> AddBooking(Booking newBooking) 
         {
             //If method returns tu
-            if(_Ibooking.AddBooking(newBooking))
+            if(bookingRepository.AddBooking(newBooking))
             {
                 return Ok("Shelter successfully booked");
             }
             else
             {
-                return BadRequest("");
+                return BadRequest("Shelter is already booked on those dates");
             }
            
         }

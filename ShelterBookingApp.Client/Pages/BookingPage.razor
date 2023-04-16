@@ -2,7 +2,11 @@
 @using ShelterBookingApp.Shared.Models;
 @inject HttpClient Http; 
 @using Radzen.Blazor; 
+@using Radzen.Blazor.Rendering
+
+
 @inject NavigationManager navManager; 
+
 
 
 
@@ -40,25 +44,27 @@
             <InputDate class="col-md-4 mb-3" @bind-Value="@newBooking.EndDate" placeholder="CHooseDate"/>
 
         </div>
+        <button  class="bt--btnConfirm"type="submit">Confirm!</button>
 
-        <div class="col-12 mb-3">
-            <button type="submit" class="btn btn-primary">Confirm Booking</button>
-        </div>
+  
     </EditForm>
-
-
 
     <div>
         <br/>
-        @if (IsDatesOverlapping(newBooking.StartDate, newBooking.EndDate) == true)
-        {
+        @if (IsDatesOverlapping(newBooking.StartDate, newBooking.EndDate) && DateTime.Compare(newBooking.StartDate, newBooking.EndDate) != 0)
+    {
             <p style="color:red"> The shelter is unfortunately occupied on the following dates</p>
             <p style="color:red">@overlapMessage</p>
         }
     </div>
 
 
-<h1 style="color:dodgerblue">@responseMessage</h1>
+
+    <h1 style="color:dodgerblue">@responseMessage</h1>
+
+
+    
+
 }
 
 @code {
@@ -68,18 +74,20 @@
     [SupplyParameterFromQuery]
     public string? shelterId { get; set; }
     public Shelter? yourShelter { get; set; }
-    //private string? startDate = DateTime.UtcNow.ToString("D");
-    //private string? endDate = DateTime.UtcNow.ToString("D");
     private Booking newBooking { get; set; } = new Booking();
     public EditContext editContext;
     private string responseMessage; 
     private List<Booking> bookingList = new List<Booking>(); 
-    private string overlapMessage = ""; 
+    private string overlapMessage = "";
+    private DateTime bookFrom = DateTime.UtcNow;
 
 
     protected override async Task OnInitializedAsync()
     {
+
+
         editContext = new EditContext(newBooking);
+
         newBooking.StartDate = DateTime.UtcNow;
         newBooking.EndDate = DateTime.UtcNow; 
 
@@ -88,44 +96,70 @@
             // Retrieving the Shelter object that has the specified shelterId
             var shelter = await Http.GetFromJsonAsync<Shelter>("https://localhost:7269/api/Shelter/" + shelterId);
 
-            var bookings = await Http.GetFromJsonAsync<List<Booking>>("https://localhost:7269/api/Booking/");
+            var bookings = await Http.GetFromJsonAsync<List<Booking>>("https://localhost:7269/api/Booking/" + shelterId);
 
             // Setting our local variable to the returned shelter object
             yourShelter = shelter;
             bookingList = bookings; 
         }
-
-
     }
+
+
 
     public async Task HandleValidSubmit()
     {
         await CreateBooking();
-        
 
     }
 
-  
+
 
     public async Task CreateBooking()
     {
         newBooking.ObjectId = "";
         newBooking.ShelterId = shelterId;
 
+        newBooking.StartDate = new DateTime(newBooking.StartDate.Year, newBooking.StartDate.Month, newBooking.StartDate.Day, 14, 00, 00);
+        newBooking.EndDate = new DateTime(newBooking.EndDate.Year, newBooking.EndDate.Month, newBooking.EndDate.Day, 11, 00, 00);
+
+        if (newBooking.StartDate.Date == newBooking.EndDate.Date)
+        {
+            newBooking.EndDate = newBooking.EndDate.AddDays(1);
+        }
+
         var response = await Http.PostAsJsonAsync<Booking>("https://localhost:7269/api/Booking", newBooking);
 
         //Setting http responsemessage from controller
         responseMessage = await response.Content.ReadAsStringAsync();
 
-        //Setting newbooking
-        newBooking = new Booking();
-        newBooking.StartDate = DateTime.UtcNow;
-        newBooking.EndDate = DateTime.UtcNow;  
 
+        //Setting newbooking
+        if (response.IsSuccessStatusCode) 
+        {
+            responseMessage = responseMessage + " from " + newBooking.StartDate.ToString("d") + " to " + newBooking.EndDate.ToString("d") + ". Enjoy your stay!";
+
+            newBooking = new Booking();
+            newBooking.StartDate = DateTime.UtcNow;
+            newBooking.EndDate = DateTime.UtcNow;  
+            editContext = new EditContext(newBooking);
+         
+
+        }
+        else
+        {
+            responseMessage = responseMessage + " from " + newBooking.StartDate.ToString("d") + " to " + newBooking.EndDate.ToString("d") + ". Please choose other dates.";
+           
+        }
     }
+       
+
+
 
     public bool IsDatesOverlapping(DateTime startDate, DateTime endDate)
     {
+
+        startDate = new DateTime(startDate.Year, startDate.Month, startDate.Day, 14, 00, 00);
+        endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 11, 00, 00);
         foreach (var b in bookingList)
         {
             if (startDate < b.EndDate && endDate > b.StartDate)
@@ -138,12 +172,9 @@
         return false;
     }
 
+
     
-    //private async void ReloadPage()
-    //{
-    //    await Task.Delay(5000); 
-    //    navManager.NavigateTo(navManager.Uri, true);
-    //}
+   
     
 
 

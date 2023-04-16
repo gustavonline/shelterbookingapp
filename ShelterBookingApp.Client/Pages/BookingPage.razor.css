@@ -4,6 +4,8 @@
     padding-top:50px;
 }
 
-h2{
-    
+.btn--btnConfirm {
+    background-color:blue;
+    border-radius: 2px;
+    border-color: #198754;
 }

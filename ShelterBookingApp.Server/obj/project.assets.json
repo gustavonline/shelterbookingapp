@@ -52,6 +52,40 @@
           "buildMultiTargeting/Blazored.Modal.props": {}
         }
       },
+      "Blazorise/1.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise.Licensing": "1.1.0",
+          "Microsoft.AspNetCore.Components": "7.0.4",
+          "Microsoft.AspNetCore.Components.Web": "7.0.4",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Blazorise.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Licensing/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Blazorise.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Blazorise.Licensing.dll": {}
+        }
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1810,15 +1844,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         }
@@ -3783,6 +3817,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Blazored.Modal": "7.1.0",
+          "Blazorise": "1.2.2",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
           "MongoDB.Bson": "2.19.1",
           "MongoDB.Driver": "2.19.1",
@@ -3883,6 +3918,76 @@
         "lib/net6.0/Blazored.Modal.dll",
         "staticwebassets/Blazored.Modal.bundle.scp.css",
         "staticwebassets/BlazoredModal.razor.js"
+      ]
+    },
+    "Blazorise/1.2.2": {
+      "sha512": "IISYFSUhmCjsGBUbW4EBVnU0Me2wtvlIeuZ/NqNj6OpT/T6TmxN2xvwNUrRrVqnysZ/3sbjhCOuQqt6p7gbjqw==",
+      "type": "package",
+      "path": "blazorise/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.1.2.2.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "lib/net6.0/Blazorise.dll",
+        "lib/net6.0/Blazorise.xml",
+        "lib/net7.0/Blazorise.dll",
+        "lib/net7.0/Blazorise.xml",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.min.css",
+        "staticwebassets/breakpoint.js",
+        "staticwebassets/button.js",
+        "staticwebassets/closable.js",
+        "staticwebassets/colorPicker.js",
+        "staticwebassets/datePicker.js",
+        "staticwebassets/dragDrop.js",
+        "staticwebassets/dropdown.js",
+        "staticwebassets/fileEdit.js",
+        "staticwebassets/filePicker.js",
+        "staticwebassets/inputMask.js",
+        "staticwebassets/io.js",
+        "staticwebassets/memoEdit.js",
+        "staticwebassets/numericPicker.js",
+        "staticwebassets/observer.js",
+        "staticwebassets/popper.js",
+        "staticwebassets/table.js",
+        "staticwebassets/textEdit.js",
+        "staticwebassets/theme.js",
+        "staticwebassets/timePicker.js",
+        "staticwebassets/tooltip.js",
+        "staticwebassets/utilities.js",
+        "staticwebassets/validators/DateTimeMaskValidator.js",
+        "staticwebassets/validators/NoValidator.js",
+        "staticwebassets/validators/NumericMaskValidator.js",
+        "staticwebassets/validators/RegExMaskValidator.js",
+        "staticwebassets/vendors/Behave.js",
+        "staticwebassets/vendors/Pickr.js",
+        "staticwebassets/vendors/autoNumeric.js",
+        "staticwebassets/vendors/flatpickr.js",
+        "staticwebassets/vendors/inputmask.js",
+        "staticwebassets/vendors/jsencrypt.js",
+        "staticwebassets/vendors/sha512.js"
+      ]
+    },
+    "Blazorise.Licensing/1.1.0": {
+      "sha512": "QDHl4m8ixmq+xIsW3d0kHBpJYJPqMBzbNCFhtEsqSrmrAPMEmSVm6r9pprkgT51leeqvkPxuy22Osiql48KgDQ==",
+      "type": "package",
+      "path": "blazorise.licensing/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.licensing.1.1.0.nupkg.sha512",
+        "blazorise.licensing.nuspec",
+        "lib/net6.0/Blazorise.Licensing.dll",
+        "lib/net7.0/Blazorise.Licensing.dll"
       ]
     },
     "DnsClient/1.6.1": {
@@ -6650,14 +6755,15 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.1",
+      "path": "newtonsoft.json/13.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
+        "README.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -6666,13 +6772,15 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
@@ -11155,50 +11263,31 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Blazorise >= 1.2.2",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.6",
       "MongoDB.Bson >= 2.19.1",
       "MongoDB.Driver >= 2.19.1",
+      "Newtonsoft.Json >= 13.0.3",
       "Radzen.Blazor >= 4.9.1",
       "ShelterBookingApp.Client >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\brolo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
       "projectName": "ShelterBookingApp.Server",
       "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
       "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Server\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
-      "projectName": "ShelterBookingApp.Server",
-      "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Server\\ShelterBookingApp.Server.csproj",
-      "packagesPath": "C:\\Users\\brolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Server\\obj\\",
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\brolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11212,13 +11301,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
               "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj"
-=======
-            "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj": {
-              "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Client\\ShelterBookingApp.Client.csproj"
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
             }
           }
         }
@@ -11233,6 +11317,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Blazorise": {
+            "target": "Package",
+            "version": "[1.2.2, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.4, )"
@@ -11248,6 +11336,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.19.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Radzen.Blazor": {
             "target": "Package",

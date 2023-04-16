@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {}
   },
   "projects": {
@@ -13,30 +12,9 @@
         "projectPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
         "packagesPath": "C:\\Users\\Ida Beate Bjørn\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ida Beate Bjørn\\Documents\\Repositories\\shelterbookingapp\\ShelterBookingApp.Shared\\obj\\",
-=======
-    "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
-        "projectName": "ShelterBookingApp.Shared",
-        "projectPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\ShelterBookingApp.Shared.csproj",
-        "packagesPath": "C:\\Users\\brolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brolo\\Desktop\\GitHub\\shelterbookingapp(ny)\\shelterbookingapp\\ShelterBookingApp.Shared\\obj\\",
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\Ida Beate Bjørn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\brolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> b8be34b5e3c8a769fe28430ae3d217ba245f9f43
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

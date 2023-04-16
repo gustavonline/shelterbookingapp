@@ -30,7 +30,8 @@ public BookingRepository()
     {
         if (IsBookingOverlapping(newBooking)) {
             return false;
-        } else { 
+        } else {
+            Console.WriteLine("Booking added to database");
             collection.InsertOne(newBooking);
             return true;
         }
@@ -42,8 +43,10 @@ public BookingRepository()
         //Filtering for dates less than
         var newFilter = Builders<Booking>.Filter.And(
             Builders<Booking>.Filter.Lte("StartDate", newBooking.EndDate),
-            Builders<Booking>.Filter.Gte("EndDate", newBooking.StartDate)
-        );
+            Builders<Booking>.Filter.Gte("EndDate", newBooking.StartDate),
+            Builders<Booking>.Filter.Eq("ShelterId", newBooking.ShelterId)
+        ); 
+        Console.WriteLine(newBooking.StartDate.Date.ToString());
 
         //Getting those data based on filter 
         var overlappingBookings = collection.Find(newFilter).ToList();
@@ -51,13 +54,12 @@ public BookingRepository()
         //If none are found return true
         if (overlappingBookings.Count > 0)
         {
+            Console.WriteLine("Shelter is already booked...");
             return true;
         }
         //If any are found, return false 
-        else
-        {
-            return false;
-        }
+        return false;
+       
         
     }
     
