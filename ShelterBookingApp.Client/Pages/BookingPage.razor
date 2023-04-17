@@ -42,9 +42,7 @@
             <InputDate class="col-md-4 mb-3" @bind-Value="@newBooking.EndDate" placeholder="CHooseDate"/>
 
         </div>
-        <button  class="bt--btnConfirm"type="submit">Confirm!</button>
-
-  
+        <button  class="bt--btnConfirm" type="submit">Confirm!</button>
     </EditForm>
 
     <div>
@@ -56,17 +54,12 @@
         }
     </div>
 
-
-
     <h1 style="color:dodgerblue">@responseMessage</h1>
-
-
     
 
 }
 
 @code {
-
 
     [Parameter]
     [SupplyParameterFromQuery]
@@ -82,10 +75,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-
-
         editContext = new EditContext(newBooking);
-
         newBooking.StartDate = DateTime.UtcNow;
         newBooking.EndDate = DateTime.UtcNow; 
 
@@ -103,13 +93,10 @@
     }
 
 
-
     public async Task HandleValidSubmit()
     {
         await CreateBooking();
-
     }
-
 
 
     public async Task CreateBooking()
@@ -117,14 +104,18 @@
         newBooking.ObjectId = "";
         newBooking.ShelterId = shelterId;
 
+        //Hardcoding the input-dates with a time-of-day (checkin and checkout )
         newBooking.StartDate = new DateTime(newBooking.StartDate.Year, newBooking.StartDate.Month, newBooking.StartDate.Day, 14, 00, 00);
         newBooking.EndDate = new DateTime(newBooking.EndDate.Year, newBooking.EndDate.Month, newBooking.EndDate.Day, 11, 00, 00);
 
+        // Adds a day, if startdate is same as enddate
         if (newBooking.StartDate.Date == newBooking.EndDate.Date)
         {
             newBooking.EndDate = newBooking.EndDate.AddDays(1);
         }
+        
 
+        //Posting with http.post method to controller
         var response = await Http.PostAsJsonAsync<Booking>("https://localhost:7269/api/Booking", newBooking);
 
         //Setting http responsemessage from controller
@@ -135,31 +126,27 @@
         if (response.IsSuccessStatusCode) 
         {
             responseMessage = responseMessage + " from " + newBooking.StartDate.ToString("d") + " to " + newBooking.EndDate.ToString("d") + ". Enjoy your stay!";
-
             newBooking = new Booking();
             newBooking.StartDate = DateTime.UtcNow;
             newBooking.EndDate = DateTime.UtcNow;  
             editContext = new EditContext(newBooking);
-         
 
         }
         else
         {
             responseMessage = responseMessage + " from " + newBooking.StartDate.ToString("d") + " to " + newBooking.EndDate.ToString("d") + ". Please choose other dates.";
-           
         }
     }
        
 
-
-
     public bool IsDatesOverlapping(DateTime startDate, DateTime endDate)
     {
-
+        //Hardcoing the input datetime value 
         startDate = new DateTime(startDate.Year, startDate.Month, startDate.Day, 14, 00, 00);
         endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 11, 00, 00);
         foreach (var b in bookingList)
         {
+            // Checking for overlap of dates, and setting overlapMessage to the first match in bookingList
             if (startDate < b.EndDate && endDate > b.StartDate)
             {
                 overlapMessage = b.StartDate.ToString("d") + " to " +  b.EndDate.ToString("d");

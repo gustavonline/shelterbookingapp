@@ -2,7 +2,7 @@ using ShelterBookingApp.Shared.Models;
 
 namespace ShelterBookingApp.Server.Interface;
 
-public interface IBooking
+public interface IBooking 
 {
     List<Booking> GetAllBookings();
     

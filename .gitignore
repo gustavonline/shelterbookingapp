@@ -839,3 +839,26 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/rider,macos,aspnetcore,windows,visualstudio,csharp
 /ShelterBookingApp.Shared/obj/project.assets.json
+ShelterBookingApp.Client/obj/Debug/net7.0/ShelterBookingApp.Client.assets.cache
+ShelterBookingApp.Client/obj/Debug/net7.0/ShelterBookingApp.Client.csproj.AssemblyReference.cache
+ShelterBookingApp.Client/obj/Debug/net7.0/ShelterBookingApp.Client.GeneratedMSBuildEditorConfig.editorconfig
+ShelterBookingApp.Client/obj/project.assets.json
+ShelterBookingApp.Client/obj/project.nuget.cache
+ShelterBookingApp.Client/obj/ShelterBookingApp.Client.csproj.nuget.dgspec.json
+ShelterBookingApp.Client/obj/ShelterBookingApp.Client.csproj.nuget.g.props
+ShelterBookingApp.Client/obj/ShelterBookingApp.Client.csproj.nuget.g.targets
+ShelterBookingApp.Server/obj/Debug/net7.0/ShelterBookingApp.Server.assets.cache
+ShelterBookingApp.Server/obj/Debug/net7.0/ShelterBookingApp.Server.csproj.AssemblyReference.cache
+ShelterBookingApp.Server/obj/Debug/net7.0/ShelterBookingApp.Server.GeneratedMSBuildEditorConfig.editorconfig
+ShelterBookingApp.Server/obj/project.assets.json
+ShelterBookingApp.Server/obj/project.nuget.cache
+ShelterBookingApp.Server/obj/ShelterBookingApp.Server.csproj.nuget.dgspec.json
+ShelterBookingApp.Server/obj/ShelterBookingApp.Server.csproj.nuget.g.props
+ShelterBookingApp.Server/obj/ShelterBookingApp.Server.csproj.nuget.g.targets
+ShelterBookingApp.Shared/obj/Debug/net7.0/ShelterBookingApp.Shared.assets.cache
+ShelterBookingApp.Shared/obj/Debug/net7.0/ShelterBookingApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+ShelterBookingApp.Shared/obj/project.assets.json
+ShelterBookingApp.Shared/obj/project.nuget.cache
+ShelterBookingApp.Shared/obj/ShelterBookingApp.Shared.csproj.nuget.dgspec.json
+ShelterBookingApp.Shared/obj/ShelterBookingApp.Shared.csproj.nuget.g.props
+ShelterBookingApp.Shared/obj/ShelterBookingApp.Shared.csproj.nuget.g.targets

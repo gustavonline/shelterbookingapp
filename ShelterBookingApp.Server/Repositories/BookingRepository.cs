@@ -45,8 +45,7 @@ public BookingRepository()
             Builders<Booking>.Filter.Lte("StartDate", newBooking.EndDate),
             Builders<Booking>.Filter.Gte("EndDate", newBooking.StartDate),
             Builders<Booking>.Filter.Eq("ShelterId", newBooking.ShelterId)
-        ); 
-        Console.WriteLine(newBooking.StartDate.Date.ToString());
+        );
 
         //Getting those data based on filter 
         var overlappingBookings = collection.Find(newFilter).ToList();
@@ -54,7 +53,6 @@ public BookingRepository()
         //If none are found return true
         if (overlappingBookings.Count > 0)
         {
-            Console.WriteLine("Shelter is already booked...");
             return true;
         }
         //If any are found, return false 
