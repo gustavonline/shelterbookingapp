@@ -2,9 +2,7 @@
 @inject HttpClient Http;
 @using ShelterBookingApp.Shared.Models;
 @inject NavigationManager NavManager;
-@using System.Text.Json;
-
-
+@inject IModalService ModalService;
 
 <h3>ShelterPage</h3>
 
@@ -20,16 +18,8 @@ else
 
 <div class="row">
     <div class="col-md-3">
-        <input type="text" class="form-control" placeholder="Placering">
-    </div>
-    <div class="col-md-3">
-        <input type="date" class="form-control" placeholder="Check ind">
-    </div>
-    <div class="col-md-3">
-        <input type="date" class="form-control" placeholder="Check Ud">
-    </div>
-    <div class="col-md-3">
-        <button class="btn btn-primary btn-block">Søg</button>
+        @* @OnInput created in order to filter the list of shelters *@
+        <input type="text" class="form-control" placeholder="Search by Shelter Name" @bind="SearchInput" @oninput="FilterShelters">
     </div>
 </div>
 
@@ -44,7 +34,7 @@ else
     </tr>
     </thead>
     <tbody>
-    @foreach (var shelter in Shelters)
+    @foreach (var shelter in FilteredShelters)
     {
             
             <tr>
@@ -64,7 +54,9 @@ else
 @code {
     private List<Shelter> Shelters { get; set; } = new List<Shelter>();
 
-
+    // New list and property to hold the filtered shelters
+    private List<Shelter> FilteredShelters { get; set; } = new();
+    private string SearchInput { get; set; } = "";
 
     private bool IsLoading = true;
     protected override async Task OnInitializedAsync()
@@ -74,6 +66,7 @@ else
             IsLoading = true;
             Console.WriteLine("Get shelterlist from client ");
             Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+            FilteredShelters = Shelters;
         }
         // 
         finally
@@ -81,12 +74,7 @@ else
             IsLoading = false;
         }
     }
-
-
-
-
-
-
+    
 
 
     public void GoToPage(string shelterId)
@@ -94,22 +82,14 @@ else
 
         NavManager.NavigateTo($"/booking?shelterId={shelterId}");
     }
-
-
-
-
-
-
-    // Gammel version 
-    //var response = await Http.GetAsync(NavManager.ToAbsoluteUri("https://localhost:7269/api/shelter"));
-    //if (response.IsSuccessStatusCode)
-    //{
-    //    var content = await response.Content.ReadAsStringAsync();
-    //    Shelters = JsonSerializer.Deserialize<List<Shelter>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-    //}
-    //else
-    //{
-    //    Console.WriteLine($"Error fetching shelters: {response.StatusCode}");
-    //}
+    
+    // Using change event to filter the list of shelters. Using LINQ where method to filter the list of shelters based on the search input.
+    private void FilterShelters(ChangeEventArgs e)
+    {
+        SearchInput = e.Value.ToString();
+        FilteredShelters = string.IsNullOrWhiteSpace(SearchInput)
+            ? Shelters
+            : Shelters.Where(s => s.Properties.Name.Contains(SearchInput, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
 
 }

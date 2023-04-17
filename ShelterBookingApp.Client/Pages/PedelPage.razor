@@ -4,7 +4,7 @@
 @inject NavigationManager NavManager;
 @inject IModalService ModalService;
 
-<h3>Pedelside</h3>
+<h3>Adminpage bookings</h3>
 
 <div class="row">
     <div class="col-md-3">
@@ -38,8 +38,8 @@
 </table>
 
 @code {
-
-    private List<Shelter> Shelters { get; set; } = new();
+    private List<Shelter> Shelters { get; set; } = new List<Shelter>();
+    
     // New list and property to hold the filtered shelters
     private List<Shelter> FilteredShelters { get; set; } = new();
     private string SearchInput { get; set; } = "";
