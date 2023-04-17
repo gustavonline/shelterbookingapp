@@ -7,8 +7,6 @@
 
 
 
-
-
 <h3>Booking</h3>
 @if (yourShelter != null)
 {
@@ -49,7 +47,7 @@
         <br/>
         @if (IsDatesOverlapping(newBooking.StartDate, newBooking.EndDate) && DateTime.Compare(newBooking.StartDate, newBooking.EndDate) != 0)
     {
-            <p style="color:red"> The shelter is unfortunately occupied on the following dates</p>
+            <p style="color:red"> Shelter occupied on these dates: </p>
             <p style="color:red">@overlapMessage</p>
         }
     </div>
@@ -63,7 +61,7 @@
 
     [Parameter]
     [SupplyParameterFromQuery]
-    public string? shelterId { get; set; }
+    public string shelterId { get; set; }
     public Shelter? yourShelter { get; set; }
     private Booking newBooking { get; set; } = new Booking();
     public EditContext editContext;
@@ -77,7 +75,7 @@
     {
         editContext = new EditContext(newBooking);
         newBooking.StartDate = DateTime.UtcNow;
-        newBooking.EndDate = DateTime.UtcNow; 
+        newBooking.EndDate = DateTime.UtcNow.AddDays(1);
 
         if (shelterId != null)
         {
@@ -108,7 +106,7 @@
         newBooking.StartDate = new DateTime(newBooking.StartDate.Year, newBooking.StartDate.Month, newBooking.StartDate.Day, 14, 00, 00);
         newBooking.EndDate = new DateTime(newBooking.EndDate.Year, newBooking.EndDate.Month, newBooking.EndDate.Day, 11, 00, 00);
 
-        // Adds a day, if startdate is same as enddate
+        //Adds a day, if startdate is same as enddate
         if (newBooking.StartDate.Date == newBooking.EndDate.Date)
         {
             newBooking.EndDate = newBooking.EndDate.AddDays(1);
