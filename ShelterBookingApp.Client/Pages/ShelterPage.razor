@@ -41,7 +41,8 @@ else
                 <td>@shelter.Properties.Name</td>
                 <td>@shelter.Properties.Capacity</td>
                 <td>@shelter.Properties.Municipality</td>
-                <td><button class="btn btn-success" type="button" @onclick="() => GoToPage(shelter.Id)"> Book</button></td>
+                <td><button class="btn btn-success" type="button" @onclick="() =>
+                    GoToPage(shelter.Id)"> Book</button></td>
             </tr>
     }
     </tbody>
@@ -59,6 +60,7 @@ else
     private string SearchInput { get; set; } = "";
 
     private bool IsLoading = true;
+
     protected override async Task OnInitializedAsync()
     {
         try
@@ -68,7 +70,7 @@ else
             Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
             FilteredShelters = Shelters;
         }
-        // 
+        
         finally
         {
             IsLoading = false;

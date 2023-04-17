@@ -39,7 +39,7 @@
 
 @code {
     private List<Shelter> Shelters { get; set; } = new List<Shelter>();
-    
+
     // New list and property to hold the filtered shelters
     private List<Shelter> FilteredShelters { get; set; } = new();
     private string SearchInput { get; set; } = "";
@@ -51,7 +51,7 @@
         FilteredShelters = Shelters;
     }
 
-    
+
     // Using change event to filter the list of shelters. Using LINQ where method to filter the list of shelters based on the search input.
     private void FilterShelters(ChangeEventArgs e)
     {

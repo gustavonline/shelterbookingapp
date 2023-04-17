@@ -39,8 +39,10 @@ public BookingRepository()
 
     public bool IsBookingOverlapping(Booking newBooking)
     {
-        //Adding filter that finds a selection of data
-        //Filtering for dates less than
+        //Adding filter that finds a selection of data 
+        // - The StartDate of existing booking must be less than or equal to the EndDate of the new booking.
+        // - The EndDate of the existing booking must be greater than or equal to the StartDate of the new booking.
+        // - The ShelterId of the existing booking must match the ShelterId of the new booking.
         var newFilter = Builders<Booking>.Filter.And(
             Builders<Booking>.Filter.Lte("StartDate", newBooking.EndDate),
             Builders<Booking>.Filter.Gte("EndDate", newBooking.StartDate),

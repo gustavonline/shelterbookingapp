@@ -58,18 +58,16 @@
 }
 
 @code {
-
     [Parameter]
     [SupplyParameterFromQuery]
     public string shelterId { get; set; }
-    public Shelter? yourShelter { get; set; }
-    private Booking newBooking { get; set; } = new Booking();
-    public EditContext editContext;
-    private string responseMessage; 
+
+    private Shelter? yourShelter;
+    private Booking newBooking  = new Booking();
     private List<Booking> bookingList = new List<Booking>(); 
     private string overlapMessage = "";
-    private DateTime bookFrom = DateTime.UtcNow;
-
+    private string responseMessage;
+    private EditContext editContext;
 
     protected override async Task OnInitializedAsync()
     {
