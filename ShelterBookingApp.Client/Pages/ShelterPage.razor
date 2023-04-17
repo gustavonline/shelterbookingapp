@@ -2,7 +2,6 @@
 @inject HttpClient Http;
 @using ShelterBookingApp.Shared.Models;
 @inject NavigationManager NavManager;
-@inject IModalService ModalService;
 
 <h3>ShelterPage</h3>
 
@@ -68,6 +67,8 @@ else
             IsLoading = true;
             Console.WriteLine("Get shelterlist from client ");
             Shelters = await Http.GetFromJsonAsync<List<Shelter>>("https://localhost:7269/api/Shelter");
+            
+            // Assigning the list of shelters to the list of filtered shelters. 
             FilteredShelters = Shelters;
         }
         
@@ -88,10 +89,14 @@ else
     // Using change event to filter the list of shelters. Using LINQ where method to filter the list of shelters based on the search input.
     private void FilterShelters(ChangeEventArgs e)
     {
+        // SearchInput is the value of the input field, incase the user searches for an integer, we need to convert it to string
         SearchInput = e.Value.ToString();
+        
+        // The list FilteredSheters is filtered based on the search input. If the search input is empty, the list is not filtered.
         FilteredShelters = string.IsNullOrWhiteSpace(SearchInput)
-            ? Shelters
-            : Shelters.Where(s => s.Properties.Name.Contains(SearchInput, StringComparison.OrdinalIgnoreCase)).ToList();
+            
+            // ('? :') is an operator, which is used to check if the search input is empty or not. If the search input is empty, the list is not filtered.
+            ? Shelters : Shelters.Where(s => s.Properties.Name.Contains(SearchInput, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
 }
