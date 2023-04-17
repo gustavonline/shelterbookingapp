@@ -4,8 +4,10 @@
     padding-top:50px;
 }
 
-.btn--btnConfirm {
-    background-color:blue;
-    border-radius: 2px;
-    border-color: #198754;
+.btn btn-success {
+    background-color: #198754 !important;
+}
+
+#😀 {
+    color: white;
 }

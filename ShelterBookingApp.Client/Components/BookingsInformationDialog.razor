@@ -1,43 +1,37 @@
 @using ShelterBookingApp.Shared.Models
-@using Blazored.Modal
-@using Blazored.Modal.Services
 @inject HttpClient Http;
 
 <div>
-    <ModalHeader>
-        <h4 class="modal-title">Booking information</h4>
-    </ModalHeader>
+    @* Using bootstrap modal to display the bookings list https://getbootstrap.com/docs/4.0/components/modal/*@
     <ModalContent>
         <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>Booking Id</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Booke Name</th>
-                <th>Bookee Address</th>
-                <th>Bookee Phone</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach (var booking in Bookings)
-            {
+            <table class="table table-striped">
+                <thead>
                 <tr>
-                    <td>@booking.ObjectId</td>
-                    <td>@booking.StartDate</td>
-                    <td>@booking.EndDate</td>
-                    <td>@booking.BookeeName</td>
-                    <td>@booking.BookeeAddress</td>
-                    <td>@booking.BookeePhone</td>
+                    <th>Booking Id</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Booke Name</th>
+                    <th>Bookee Address</th>
+                    <th>Bookee Phone</th>
                 </tr>
-            }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                @foreach (var booking in Bookings)
+                {
+                    <tr>
+                        <td>@booking.ObjectId</td>
+                        <td>@booking.StartDate</td>
+                        <td>@booking.EndDate</td>
+                        <td>@booking.BookeeName</td>
+                        <td>@booking.BookeeAddress</td>
+                        <td>@booking.BookeePhone</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
         </div>
     </ModalContent>
-    <ModalFooter>
-    </ModalFooter>
 </div>
 
 

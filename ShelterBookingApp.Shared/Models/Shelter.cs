@@ -11,13 +11,13 @@ namespace ShelterBookingApp.Shared.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; } = "";
 
-        //Her bruges Bson mapping til at "gå dybere" i vores objekt, og mapper de nødvendige værdier ud, dataen er altså nested i MongoDB
+        // Here we use Bson mapping to "go deeper" into our object and map out the necessary values. The data is nested in MongoDB.
         [BsonElement("properties")]
         public ShelterProperties Properties { get; set; }
 
     }
 
-    // Herfra og ned mapper vi data i objected, lig mærke til at ShelterProperties er en nested variable som vi lavede ovenover så driveren forstår hvad den skal kigge efter
+// From here on down, we are mapping data in the object. Note that ShelterProperties is a nested variable that we created above, so the driver understands what to look for.
     [BsonIgnoreExtraElements]
     public class ShelterProperties
     {
